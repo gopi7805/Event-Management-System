@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Event Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-layout">
+    <aside class="sidebar">
+        <a href="#dashboard" class="brand">
+            <span class="brand-logo">🎟️</span>
+            <span>
+                <strong>Event Management<br>System</strong>
+                <small>Discover · Book · Experience</small>
+            </span>
+        </a>
+
+        <p class="menu-label">WORKSPACE</p>
+        <nav class="side-menu">
+            <a href="#dashboard" class="nav-link" data-page="dashboard"><span>📊</span> Dashboard</a>
+            <a href="#events" class="nav-link" data-page="events"><span>🎉</span> Explore Events</a>
+            <a href="#add-event" class="nav-link" data-page="add-event"><span>➕</span> Add Event</a>
+            <a href="#booking" class="nav-link" data-page="booking"><span>🎫</span> Book Tickets</a>
+            <a href="#bookings" class="nav-link" data-page="bookings"><span>📋</span> All Bookings</a>
+        </nav>
+
+        <div class="sidebar-promo">
+            <div class="promo-icon">✨</div>
+            <h3>Make it memorable</h3>
+            <p>Discover events and create experiences worth remembering.</p>
+            <a href="#events">Explore events →</a>
+        </div>
+
+        <div class="sidebar-footer">🟢 Event Management System</div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div class="topbar-brand">
+                <span class="topbar-icon">🎪</span>
+                <div>
+                    <span class="topbar-label">EVENT MANAGEMENT SYSTEM</span>
+                    <p class="topbar-title">Every event starts here</p>
+                </div>
+            </div>
+            <div class="topbar-right">
+                <span id="connectionDot" class="connection-dot offline"></span>
+                <span id="connectionText">Connecting to backend...</span>
+                <button class="icon-button" id="refreshBtn" title="Refresh">↻</button>
+            </div>
+        </header>
+
+        <section id="pageContent" class="page-content">
+            <div class="loading-state">Loading events...</div>
+        </section>
+
+        <footer class="app-footer">
+            <span>🎟️ Event Management System</span>
+            <span>Spring Boot · MySQL</span>
+        </footer>
+    </main>
+</div>
+
+<div id="toast" class="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
